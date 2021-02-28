@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The XMLHttpRequest Object</h1>
+
+<button type="button" onclick="loadDoc()">Request data</button>
+
+<p id="demo"></p>
+
+
+<script>
+function loadDoc() {
+	const uri = `https://huahua315.top/jin`;
+
+	var request = new XMLHttpRequest()
+
+	request.open('GET', uri, true)
+	request.onload = function () {
+	  // Begin accessing JSON data here
+	  var data = this.response
+	  console.log(data)
+	}
+
+	request.send()
+}
+</script>
+
+</body>
+</html>
